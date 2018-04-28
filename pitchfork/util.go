@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-// RSS2 date format example: Sat, 28 Apr 2018 05:18:00 +0000
+// PitchFork RSS date format example: Sat, 28 Apr 2018 05:18:00 +0000
 // following doc is written "the Date and Time Specification of RFC 822", but actually it is RFC 1123 format.
 // cf. https://cyber.harvard.edu/rss/rss.html
 //
