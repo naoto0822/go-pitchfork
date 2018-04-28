@@ -1,0 +1,12 @@
+package pitchfork
+
+import (
+	"time"
+)
+
+// RSS2 date format example: Sat, 28 Apr 2018 05:18:00 +0000
+// see: https://golang.org/pkg/time/#pkg-constants
+//   - RFC1123Z = "Mon, 02 Jan 2006 15:04:05 -0700"
+func parseTime(s string) (time.Time, error) {
+	return time.Parse(time.RFC1123Z, s)
+}
