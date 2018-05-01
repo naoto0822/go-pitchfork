@@ -3,6 +3,7 @@ package pitchfork
 import (
 	"reflect"
 	"testing"
+	"time"
 
 	"github.com/naoto0822/gss/gss"
 )
@@ -35,8 +36,8 @@ func TestConvertArticle(t *testing.T) {
 		Title:       "LCD is came back",
 		Link:        "https://lcdsoundsystem.com/",
 		Description: "LCD SoundSystem is reunion in 2016",
-		PubDate:     "",
-		Updated:     "",
+		PubDate:     "Sat, 28 Apr 2018 05:18:00 +0000",
+		Updated:     "Tue, 01 May 2018 13:40:16 +0000",
 		Authors:     authors,
 		Categories:  categories,
 		Thumbnail:   thumbnail,
@@ -45,13 +46,21 @@ func TestConvertArticle(t *testing.T) {
 	c := newConverter()
 	actual := c.convertArticle(item)
 
+	rawPubDate := "Sat, 28 Apr 2018 05:18:00 +0000"
+	pubdate, _ := time.Parse(time.RFC1123Z, rawPubDate)
+
+	rawUpdated := "Tue, 01 May 2018 13:40:16 +0000"
+	updated, _ := time.Parse(time.RFC1123Z, rawUpdated)
+
 	expect := Article{
 		ID:          "abcdefghijk",
 		Title:       "LCD is came back",
 		Link:        "https://lcdsoundsystem.com/",
 		Description: "LCD SoundSystem is reunion in 2016",
-		RawPubDate:  "",
-		RawUpdated:  "",
+		RawPubDate:  rawPubDate,
+		PubDate:     pubdate,
+		RawUpdated:  rawUpdated,
+		Updated:     updated,
 		Author:      "james",
 		Categories:  []string{"news", "music"},
 		Thumbnail: Thumbnail{
