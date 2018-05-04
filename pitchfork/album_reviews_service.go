@@ -1,12 +1,13 @@
 package pitchfork
 
 // AlbumReviewsService
+// cf. https://pitchfork.com/rss/reviews/albums/
 type AlbumReviewsService struct {
 	articleRepository articleRepository
 	urlBuilder        *urlBuilder
 }
 
-// NewAlbumReviewsService
+// NewAlbumReviewsService factory AlbumReviewsService
 func NewAlbumReviewsService(a articleRepository, u *urlBuilder) *AlbumReviewsService {
 	return &AlbumReviewsService{
 		articleRepository: a,
