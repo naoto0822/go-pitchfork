@@ -1,7 +1,6 @@
 package pitchfork
 
-// PitchService
-// cf. https://pitchfork.com/rss/thepitch/
+// PitchService cf. https://pitchfork.com/rss/thepitch/
 type PitchService struct {
 	articleRepository articleRepository
 	urlBuilder        *urlBuilder

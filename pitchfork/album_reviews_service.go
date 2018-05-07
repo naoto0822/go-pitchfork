@@ -1,7 +1,6 @@
 package pitchfork
 
-// AlbumReviewsService
-// cf. https://pitchfork.com/rss/reviews/albums/
+// AlbumReviewsService cf. https://pitchfork.com/rss/reviews/albums/
 type AlbumReviewsService struct {
 	articleRepository articleRepository
 	urlBuilder        *urlBuilder

@@ -1,7 +1,6 @@
 package pitchfork
 
-// FeaturesService
-// cf. https://pitchfork.com/rss/features/
+// FeaturesService cf. https://pitchfork.com/rss/features/
 type FeaturesService struct {
 	articleRepository articleRepository
 	urlBuilder        *urlBuilder
