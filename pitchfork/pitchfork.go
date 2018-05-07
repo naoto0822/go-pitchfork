@@ -32,7 +32,7 @@ func NewClient() *Client {
 	bestNewTracks := NewBestNewTracksService(repo, urlBuilder)
 
 	return &Client{
-		News:            NewsService,
+		News:            news,
 		AlbumReviews:    albumReviews,
 		TrackReviews:    trackReviews,
 		Pitch:           pitch,

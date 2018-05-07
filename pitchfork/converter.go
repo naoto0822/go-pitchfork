@@ -38,6 +38,7 @@ func (c *converter) convertArticle(from gss.Item) Article {
 		Updated:     updated,
 		Author:      author,
 		Categories:  from.Categories,
+		Thumbnail:   thumbnail,
 	}
 	return article
 }

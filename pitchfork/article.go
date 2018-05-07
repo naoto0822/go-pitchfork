@@ -46,6 +46,8 @@ type Article struct {
 	Author string
 	// Categories <category> tag
 	Categories []string
+	// Thumbnail <media:thumbnail> tag in feed
+	Thumbnail Thumbnail
 }
 
 // Thumbnail <media:thumbnail> tag in feed
