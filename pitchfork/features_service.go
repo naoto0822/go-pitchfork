@@ -17,7 +17,7 @@ func NewFeaturesService(a articleRepository, u *urlBuilder) *FeaturesService {
 
 // Fetch Features Feed
 func (s *FeaturesService) Fetch() ([]Article, error) {
-	url, err := s.urlBuilder.build(newsType)
+	url, err := s.urlBuilder.build(featuresType)
 	if err != nil {
 		return nil, err
 	}

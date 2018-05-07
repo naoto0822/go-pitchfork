@@ -16,7 +16,7 @@ func NewBestNewTracksService(a articleRepository, u *urlBuilder) *BestNewTracksS
 
 // Fetch Best New Tracks Feed
 func (s *BestNewTracksService) Fetch() ([]Article, error) {
-	url, err := s.urlBuilder.build(newsType)
+	url, err := s.urlBuilder.build(bestNewTracksType)
 	if err != nil {
 		return nil, err
 	}
