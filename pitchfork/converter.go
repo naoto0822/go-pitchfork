@@ -18,12 +18,12 @@ func (c *converter) convertArticle(from gss.Item) Article {
 		Height: from.Thumbnail.Height,
 	}
 
-	pubDate, _ := parseTime(i.RawPubDate)
-	updated, _ := parseTime(i.RawUpdated)
+	pubDate, _ := parseTime(from.PubDate)
+	updated, _ := parseTime(from.Updated)
 
 	var author string
-	if len(i.Authors) > 0 {
-		a := i.Authors[0]
+	if len(from.Authors) > 0 {
+		a := from.Authors[0]
 		author = a.Name
 	}
 
@@ -32,12 +32,12 @@ func (c *converter) convertArticle(from gss.Item) Article {
 		Title:       from.Title,
 		Link:        from.Link,
 		Description: from.Description,
-		RawPubDate:  i.RawPubDate,
+		RawPubDate:  from.PubDate,
 		PubDate:     pubDate,
-		RawUpdated:  i.RawUpdated,
+		RawUpdated:  from.Updated,
 		Updated:     updated,
 		Author:      author,
-		Categories:  i.Categories,
+		Categories:  from.Categories,
 	}
 	return article
 }
