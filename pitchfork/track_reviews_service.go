@@ -4,11 +4,11 @@ package pitchfork
 // cf. https://pitchfork.com/rss/reviews/tracks/
 type TrackReviewsService struct {
 	articleRepository articleRepository
-	urlBuilder        urlBuilder
+	urlBuilder        *urlBuilder
 }
 
 // NewTrackReviewsService factory TrackReviewsService
-func NewTrackReviewsService(a articleRepository, u urlBuilder) TrackReviewsService {
+func NewTrackReviewsService(a articleRepository, u *urlBuilder) *TrackReviewsService {
 	return &TrackReviewsService{
 		articleRepository: a,
 		urlBuilder:        u,
@@ -16,7 +16,7 @@ func NewTrackReviewsService(a articleRepository, u urlBuilder) TrackReviewsServi
 }
 
 // Fetch Track Reviews
-func (r *TrackReviewsService) Fetch() ([]Article, error) {
+func (s *TrackReviewsService) Fetch() ([]Article, error) {
 	url, err := s.urlBuilder.build(trackReviewsType)
 	if err != nil {
 		return nil, err

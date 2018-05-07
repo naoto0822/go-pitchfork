@@ -7,7 +7,7 @@ type BestNewReissuesService struct {
 }
 
 // NewBestNewReissuesService factory BestNewReissuesService
-func NewBestNewReissuesService(a articleRepository, u urlBuilder) *BestNewReissuesService {
+func NewBestNewReissuesService(a articleRepository, u *urlBuilder) *BestNewReissuesService {
 	return &BestNewReissuesService{
 		articleRepository: a,
 		urlBuilder:        u,

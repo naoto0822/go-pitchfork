@@ -16,11 +16,11 @@ const (
 	// Features Feed
 	featuresType
 	// Best New Album Feed
-	bestNewAlbumType
+	bestNewAlbumsType
 	// Best New Reissues Feed
 	bestNewReissuesType
 	// Best New Track Feed
-	bestNewTrackType
+	bestNewTracksType
 )
 
 // String implmented `fmt.Stringer`
@@ -36,11 +36,11 @@ func (f feedType) String() string {
 		return "The Pitch Feed"
 	case featuresType:
 		return "Features Feed"
-	case bestNewAlbumType:
+	case bestNewAlbumsType:
 		return "Best New Album Feed"
 	case bestNewReissuesType:
 		return "Best New Reissues Feed"
-	case bestNewTrackType:
+	case bestNewTracksType:
 		return "Best New Track Feed"
 	default:
 		return "Unknown Feed"

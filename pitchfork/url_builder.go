@@ -41,11 +41,11 @@ func (u *urlBuilder) getPath(t feedType) string {
 		return "thepitch/"
 	case featuresType:
 		return "features/"
-	case bestNewAlbumType:
+	case bestNewAlbumsType:
 		return "reviews/best/albums/"
-	case bestNewReissueType:
+	case bestNewReissuesType:
 		return "reviews/best/reissues/"
-	case bestNewTrackType:
+	case bestNewTracksType:
 		return "reviews/best/tracks/"
 	default:
 		return ""

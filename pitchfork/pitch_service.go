@@ -4,11 +4,11 @@ package pitchfork
 // cf. https://pitchfork.com/rss/thepitch/
 type PitchService struct {
 	articleRepository articleRepository
-	urlBuilder        urlBuilder
+	urlBuilder        *urlBuilder
 }
 
 // NewPitchService factory PitchService
-func NewPitchService(a articleRepository, u urlBuilder) *PitchService {
+func NewPitchService(a articleRepository, u *urlBuilder) *PitchService {
 	return &PitchService{
 		articleRepository: a,
 		urlBuilder:        u,
@@ -16,7 +16,7 @@ func NewPitchService(a articleRepository, u urlBuilder) *PitchService {
 }
 
 // Fetch Pitch
-func (r *PitchService) Fetch() ([]Article, error) {
+func (s *PitchService) Fetch() ([]Article, error) {
 	url, err := s.urlBuilder.build(pitchType)
 	if err != nil {
 		return nil, err

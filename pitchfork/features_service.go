@@ -4,11 +4,11 @@ package pitchfork
 // cf. https://pitchfork.com/rss/features/
 type FeaturesService struct {
 	articleRepository articleRepository
-	urlBuilder        urlBuilder
+	urlBuilder        *urlBuilder
 }
 
 // NewFeaturesService factory FeaturesService
-func NewFeaturesService(a articleRepository, b *urlBuilder) *FeaturesService {
+func NewFeaturesService(a articleRepository, u *urlBuilder) *FeaturesService {
 	return &FeaturesService{
 		articleRepository: a,
 		urlBuilder:        u,

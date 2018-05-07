@@ -3,11 +3,11 @@ package pitchfork
 // BestNewTracksService cf. https://pitchfork.com/rss/reviews/best/tracks/
 type BestNewTracksService struct {
 	articleRepository articleRepository
-	urlBuilder        urlBuilder
+	urlBuilder        *urlBuilder
 }
 
 // NewBestNewTracksService factory BestNewTracksService
-func NewBestNewTracksService(a articleRepository, u urlBuilder) *NewBestNewTracksService {
+func NewBestNewTracksService(a articleRepository, u *urlBuilder) *BestNewTracksService {
 	return &BestNewTracksService{
 		articleRepository: a,
 		urlBuilder:        u,
