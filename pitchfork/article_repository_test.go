@@ -84,7 +84,7 @@ func TestNotFoundFetchArticle(t *testing.T) {
 	}
 
 	articles, err := repo.fetch("notfound")
-	if err != nil {
+	if err != ErrorNotFound {
 		t.Error("TestNotFoundFetchArticle: not expect return err: ", err)
 	}
 
