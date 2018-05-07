@@ -1,8 +1,6 @@
 package pitchfork
 
-import (
-	"github.com/naoto0822/gss/gss"
-)
+import ()
 
 type articleRepository interface {
 	fetch(string) ([]Article, error)
