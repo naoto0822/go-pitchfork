@@ -1,7 +1,10 @@
 package pitchfork
 
 import (
-	"github.com/naoto0822/gss/gss"
+	"fmt"
+	"reflect"
+	"testing"
+	"time"
 )
 
 type testArticleRepositoryImpl struct {
@@ -13,7 +16,7 @@ func newTestArticleRepository() articleRepository {
 
 	// TODO: factory articles data
 
-	return *testArticleRepositoryImpl{
+	return &testArticleRepositoryImpl{
 		articles: articles,
 	}
 }

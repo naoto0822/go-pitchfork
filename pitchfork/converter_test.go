@@ -26,7 +26,7 @@ func TestConvertArticle(t *testing.T) {
 		Name:  "james",
 		Email: "lcd@gmail.com",
 	}
-	authors := []Author{author}
+	authors := []gss.Author{author}
 
 	categories := []string{"news", "music"}
 

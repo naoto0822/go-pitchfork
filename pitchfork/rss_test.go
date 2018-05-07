@@ -1,6 +1,7 @@
 package pitchfork
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/naoto0822/gss/gss"
@@ -23,7 +24,7 @@ func newTestRss() rss {
 		Name:  "Win Butler",
 		Email: "arcadefire@gmail.com",
 	}
-	authors := []Author{author}
+	authors := []gss.Author{author}
 
 	categories := []string{"news", "music"}
 
