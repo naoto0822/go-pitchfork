@@ -16,6 +16,6 @@ func main() {
 		fmt.Errorf("failed fetch News Feed err:", err)
 	}
 	for _, a := range articles {
-		fmt.Printf("%+v", a)
+		fmt.Printf("%+v\n", a)
 	}
 }
