@@ -27,6 +27,7 @@ articles, err := c.News.Fetch()
 
 - [ ] integration test
 - [ ] write doc.go
+- [ ] post travis-ci to slack
 
 ## License
 
