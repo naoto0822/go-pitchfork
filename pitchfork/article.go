@@ -1,6 +1,7 @@
 package pitchfork
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -58,4 +59,25 @@ type Thumbnail struct {
 	Width int64
 	// Height attr height
 	Height int64
+}
+
+// String implmented fmt.Stringer
+// TODO: refactor using reflect package
+func (a Article) String() string {
+	var str string
+	str += "Article:\n"
+	str += fmt.Sprintf("  ID: %s\n", a.ID)
+	str += fmt.Sprintf("  Title: %s\n", a.Title)
+	str += fmt.Sprintf("  Link: %s\n", a.Link)
+	str += fmt.Sprintf("  Description: %s\n", a.Description)
+	str += fmt.Sprintf("  RawPubDate: %s\n", a.RawPubDate)
+	str += fmt.Sprintf("  PubDate %v\n", a.PubDate)
+	str += fmt.Sprintf("  RawUpdated: %s\n", a.RawUpdated)
+	str += fmt.Sprintf("  Updated: %v\n", a.Updated)
+	str += fmt.Sprintf("  Author: %s\n", a.Author)
+	str += fmt.Sprintf("  Categories: %v\n", a.Categories)
+	str += fmt.Sprintf("  Thumbnail.URL: %s\n", a.Thumbnail.URL)
+	str += fmt.Sprintf("  Thumbnail.Width: %d\n", a.Thumbnail.Width)
+	str += fmt.Sprintf("  Thumbnail.Height: %d\n", a.Thumbnail.Height)
+	return str
 }
